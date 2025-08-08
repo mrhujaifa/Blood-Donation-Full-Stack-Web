@@ -24,12 +24,52 @@
 
 ---
 
-## ⚙️ Tech Stack
+## 🧑‍💻 Technologies & Tools Used
+
+### 🔤 Languages
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+
+### ⚛️ Frontend
+- React.js (with React Router)
+- Tailwind CSS
+- DaisyUI
+
+### 🧠 Backend
+- Node.js
+- Express.js
+- RESTful API
+
+### 🔐 Authentication & Authorization
+- Firebase Authentication (for users)
+- JWT (for admin protected routes)
+
+### 🗃️ Database
+- MongoDB Atlas
+- Mongoose
+
+### 🖼️ UI Enhancements
+- React Icons
+- Jodit React (for rich text blog editor - if used)
+
+### ☁️ Deployment
+- Netlify (Frontend)
+- Render / Railway / Cyclic (Backend API)
+
+### 🔧 Development Tools
+- Git & GitHub
+- Postman
+- VS Code
+
+---
+
+## ⚙️ Tech Stack Overview
 
 | Frontend     | Backend         | Auth & DB       | UI Framework     |
 |--------------|-----------------|------------------|------------------|
 | React.js     | Node.js + Express | Firebase Auth, MongoDB Atlas | Tailwind CSS, DaisyUI |
-| React Router | REST API        | JWT (for admins) | Jodit Editor (if blog used) |
+| React Router | REST API        | JWT (for admins) | Jodit Editor (optional) |
 
 ---
 
