@@ -1,0 +1,31 @@
+.banner-bg {
+  background-image: url("https://i.postimg.cc/zB8SSJS9/blood-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 200px;
+}
+
+/* Mobile responsiveness fix */
+@media (max-width: 767px) {
+  .banner-bg {
+    height: 80vh; /* Or 100vh if you want full screen */
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .banner-bg h1 {
+    font-size: 2rem;
+  }
+
+  .banner-bg p {
+    font-size: 1rem;
+  }
+  .banner-bg {
+    padding: 0 20px;
+  }
+}
