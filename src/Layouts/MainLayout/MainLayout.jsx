@@ -4,10 +4,23 @@ import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 import SocialNavbar from "../../Components/SocialNavbar/SocialNavbar";
 import NavbarSwitcher from "../../Components/NavbarSwitcher/NavbarSwicher";
-import Navbar from "../../Components/Header/Header";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const MainLayout = () => {
   const location = useLocation();
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem("theme") || "light"
+  );
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   const isHomePage = location.pathname === "/";
 
@@ -21,15 +34,15 @@ const MainLayout = () => {
         )}
         {isHomePage ? (
           <div>
-            <Navbar />
+            <Header theme={theme} toggleTheme={toggleTheme} />
           </div>
         ) : (
           <div className="bg-gradient-to-r from-[hsl(0,89%,11%)] to-[hsl(0,100%,50%)] lg:py-3">
-            <Navbar />
+            <Header theme={theme} toggleTheme={toggleTheme} />
           </div>
         )}
         <div className="relative z-9 top-0 left-0 right-0">
-          <NavbarSwitcher />
+          <NavbarSwitcher theme={theme} toggleTheme={toggleTheme} />
         </div>
       </header>
 

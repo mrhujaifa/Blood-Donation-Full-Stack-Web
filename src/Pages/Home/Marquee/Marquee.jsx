@@ -14,9 +14,9 @@ const logoUrls = [
 
 const SwiperMarquee = () => {
   return (
-    <div className="logo-font container mx-auto w-full px-4 sm:px-6 md:px-8 lg:px-12 py-10  ">
+    <div className="container mx-auto w-full md:px-8 py-10  ">
       <div className=" mb-6">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-red-700">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-red-500">
           Our Proud Partners
         </h2>
        

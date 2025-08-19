@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../Header/Header";
+import Header from "../Header/Header";
 import SwithcherNav from "./SwithcherNav";
 
-const NavbarSwitcher = () => {
+const NavbarSwitcher = ({theme, toggleTheme}) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const NavbarSwitcher = () => {
   return (
     <>
       <div className="fixed left-0 right-0 top-0 bg-gradient-to-r from-[hsl(0,89%,11%)] to-[hsl(0,100%,50%)] ">
-        {scrolled && <SwithcherNav></SwithcherNav>}
+        {scrolled && <SwithcherNav theme={theme} toggleTheme={toggleTheme} ></SwithcherNav>}
       </div>
     </>
   );

@@ -33,9 +33,13 @@ import VolunteerContentManagement from "../Pages/Volunteer/ContentManagement/Con
 
 import Payment from "../Pages/Payment/Payment/Payment";
 import FundingPage from "../Pages/Payment/FundingPage/FundingPage";
-import PublicProfile from "../Pages/Public/Profile/Profie";
+
 import ContactPage from "../Pages/Public/ContactPage/ContactPage";
 import EditDonationRequest from "../Pages/Users/EditDonationRequest/EditDonationRequest";
+import UserProfile from "../Pages/Users/Profile/Profile";
+import OverviewStats from "../Pages/Users/Overview stats/O/OverviewStats";
+import PublicProfile from "../Pages/Public/Profile/Profie";
+import NotFound from "../Pages/Error/Error404/Error";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +49,10 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path:'*',
+        element: <NotFound></NotFound>
       },
       {
         path: "pending-requests",
@@ -89,7 +97,7 @@ export const router = createBrowserRouter([
 
       {
         path: "profile",
-        element: <PublicProfile />,
+        element: <PublicProfile></PublicProfile>,
       },
       {
         path: "contact",
@@ -132,7 +140,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "profile",
-        element: <Profile />,
+        element: <UserProfile></UserProfile>,
+      },
+      {
+        path: "overviewStats",
+        element: <OverviewStats></OverviewStats>,
       },
       {
         path: "donation-request",

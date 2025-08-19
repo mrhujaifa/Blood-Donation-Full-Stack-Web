@@ -7,7 +7,7 @@ const ContactUs = () => {
     <div className="bg-1 w-full py-16 px-4">
       <div className="container mx-auto mb-12">
         <h2 className="text-4xl font-bold text-[#ff1a56] mb-4">Contact Us</h2>
-        <p className="text-gray-600 text-lg">
+        <p className=" text-lg">
           Got a question, need help or want to donate? Feel free to reach out —
           we're here for you!
         </p>
@@ -15,8 +15,8 @@ const ContactUs = () => {
 
       <div className="grid md:grid-cols-2 gap-8 container mx-auto">
         {/* Contact Form */}
-        <div className="bg-white p-8 rounded-xl shadow-lg">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+        <div className="  border border-gray-50 p-8 rounded-xl shadow-lg">
+          <h3 className="text-2xl font-semibold -800 mb-6">
             Send a Message
           </h3>
           <form className="space-y-5">
@@ -46,21 +46,21 @@ const ContactUs = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="bg-white p-8 rounded-xl shadow-lg space-y-6">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+        <div className="  border border-gray-50 p-8 rounded-xl shadow-lg space-y-6">
+          <h3 className="text-2xl font-semibold -800 mb-4">
             Get in Touch
           </h3>
           <div className="flex items-center gap-4">
             <FaPhoneAlt className="text-[#ff1a56] text-2xl" />
-            <p className="text-gray-700 text-lg">+880 123 456 7890</p>
+            <p className="-700 text-lg">+880 123 456 7890</p>
           </div>
           <div className="flex items-center gap-4">
             <FaEnvelope className="text-[#ff1a56] text-2xl" />
-            <p className="text-gray-700 text-lg">support@bloodcare.com</p>
+            <p className="-700 text-lg">support@bloodcare.com</p>
           </div>
           <div className="flex items-center gap-4">
             <FaMapMarkerAlt className="text-[#ff1a56] text-2xl" />
-            <p className="text-gray-700 text-lg">
+            <p className="-700 text-lg">
               Dhanmondi, Dhaka, Bangladesh
             </p>
           </div>

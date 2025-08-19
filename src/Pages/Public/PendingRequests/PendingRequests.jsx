@@ -48,14 +48,14 @@ const PendingDonationRequests = () => {
       </h2>
 
       {requests.length === 0 ? (
-        <p className="text-center text-gray-500">No pending requests found.</p>
+        <p className="text-center">No pending requests found.</p>
       ) : (
         <>
           {/* Table for Large Devices */}
           <div className="hidden lg:block">
             <div className="overflow-x-auto shadow-md rounded-lg border border-gray-200">
-              <table className="min-w-full divide-y divide-gray-200 text-sm text-gray-700">
-                <thead className="bg-red-50">
+              <table className="min-w-full divide-y divide-gray-200 text-sm     -700">
+                <thead className="bg-red-600">
                   <tr>
                     <th className="px-6 py-4 text-left font-semibold">
                       Recipient

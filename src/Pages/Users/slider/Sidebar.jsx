@@ -1,6 +1,11 @@
 import { LocateFixed } from "lucide-react";
 import { HeartPulse } from "lucide-react";
-import { MdBloodtype, MdContentCopy, MdOutlineBloodtype, MdOutlineContentPaste } from "react-icons/md";
+import {
+  MdBloodtype,
+  MdContentCopy,
+  MdOutlineBloodtype,
+  MdOutlineContentPaste,
+} from "react-icons/md";
 import { FaRegNewspaper, FaUsers } from "react-icons/fa";
 
 import {
@@ -15,6 +20,7 @@ import { Link } from "react-router";
 import useAdmin from "../../../Hook/useAdmin";
 import { TableOfContents } from "lucide-react";
 import useVolunteer from "../../../Hook/useVolunteer";
+import { IoStatsChartSharp } from "react-icons/io5";
 
 const Sidebar = ({ collapsed, setSidebarCollapsed }) => {
   const [isAdmin] = useAdmin();
@@ -66,6 +72,15 @@ const Sidebar = ({ collapsed, setSidebarCollapsed }) => {
         >
           <User size={25} />
           {!collapsed && "Profile"}
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/dashboard/overviewStats"
+          className="flex items-center gap-3 px-3 py-2 rounded hover:bg-red-600 cursor-pointer text-white font-medium"
+        >
+          <IoStatsChartSharp size={25} />
+          {!collapsed && "Overview Stats"}
         </Link>
       </li>
 

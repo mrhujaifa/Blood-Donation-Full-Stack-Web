@@ -46,7 +46,7 @@ const FundingPage = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-2">
           Support Lifesaving Missions ❤️
         </h2>
-        <p className="text-gray-600 max-w-xl mx-auto">
+        <p className=" -600 max-w-xl mx-auto">
           Your contribution helps us organize more blood donation campaigns,
           support patients in emergencies, and spread hope where it's needed
           most. Every fund you donate saves a life.
@@ -68,9 +68,9 @@ const FundingPage = () => {
       ) : (
         <>
           {/* Table for md+ */}
-          <div className="hidden md:block overflow-x-auto bg-white shadow-md rounded-lg">
+          <div className="hidden md:block overflow-x-auto    shadow-md rounded-lg">
             <table className="table w-full text-sm">
-              <thead className="bg-gray-100 text-gray-700">
+              <thead className="bg-red-500">
                 <tr>
                   <th className="p-3 text-left">Donor Name</th>
                   <th className="p-3 text-left">Email</th>
@@ -86,7 +86,7 @@ const FundingPage = () => {
                     <td className="p-3 font-medium text-green-600">
                       ${fund.amount}
                     </td>
-                    <td className="p-3 text-gray-600">
+                    <td className="p-3  -600">
                       {moment(fund.date).format("MMMM Do YYYY, h:mm A")}
                     </td>
                   </tr>
@@ -100,22 +100,22 @@ const FundingPage = () => {
             {fundings.map((fund) => (
               <div
                 key={fund._id}
-                className="bg-white border-l-4 border-red-500 shadow-md rounded-xl p-4 transition hover:shadow-lg"
+                className="   border-l-4 border-red-500 shadow-md rounded-xl p-4 transition hover:shadow-lg"
               >
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-lg font-semibold text-red-600">
                     {fund.name}
                   </h3>
-                  <span className="text-sm text-gray-400">
+                  <span className="text-sm  -400">
                     {moment(fund.date).format("MMM Do")}
                   </span>
                 </div>
-                <p className="text-sm text-gray-500 mb-1">
-                  <span className="font-medium text-gray-700">Email:</span>{" "}
+                <p className="text-sm  -500 mb-1">
+                  <span className="font-medium  -700">Email:</span>{" "}
                   {fund.email}
                 </p>
                 <p className="text-sm">
-                  <span className="font-medium text-gray-700">Amount:</span>{" "}
+                  <span className="font-medium  -700">Amount:</span>{" "}
                   <span className="text-green-600 font-semibold">
                     ${fund.amount}
                   </span>
@@ -131,15 +131,15 @@ const FundingPage = () => {
         <button
           onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
           disabled={currentPage === 1}
-          className="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded disabled:opacity-50"
+          className="px-3 py-1 border border-base-content rounded disabled:opacity-50"
         >
           ◀ Previous
         </button>
-        <span className="text-gray-700 font-medium">Page {currentPage}</span>
+        <span className=" -700 font-medium">Page {currentPage}</span>
         <button
           onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded disabled:opacity-50"
+          className="px-3 py-1 border border-base-content hover:bg-gray-300 rounded disabled:opacity-50"
         >
           Next ▶
         </button>
@@ -148,22 +148,22 @@ const FundingPage = () => {
       {/* Modal for Payment */}
       {modalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-          <div className="relative w-full max-w-lg rounded-2xl bg-white p-8 shadow-2xl fade-in">
+          <div className="relative w-full max-w-lg rounded-2xl    p-8 shadow-2xl fade-in">
             {/* Close Button */}
             <button
               onClick={() => setModalOpen(false)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition duration-300 text-2xl"
+              className="absolute top-4 right-4  -400 hover: -600 transition duration-300 text-2xl"
               aria-label="Close Modal"
             >
               &times;
             </button>
 
             {/* Modal Header */}
-            <div className="mb-6 text-center">
-              <h2 className="text-2xl font-bold text-gray-800">
+            <div className="mb-6 text-center text-white">
+              <h2 className="text-2xl font-bold">
                 Secure Payment
               </h2>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm  -500">
                 Please complete your payment below.
               </p>
             </div>

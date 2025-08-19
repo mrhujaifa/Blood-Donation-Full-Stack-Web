@@ -56,8 +56,8 @@ const LifesavingWork = () => {
   const content = tabContent[activeTab];
 
   return (
-    <section className="py-12 px-6 container mx-auto">
-      <p className="text-red-600 font-semibold">What We Do</p>
+    <section className="py-12  container mx-auto">
+      <p className="text-red-600 font-semibold lg:text-4xl mb-2">What We Do</p>
       <h1
         data-aos="fade-up"
         data-aos-duration="1000"
@@ -65,7 +65,7 @@ const LifesavingWork = () => {
       >
         The Lifesaving Work We Do for Communities in Need
       </h1>
-      <p className="text-gray-600 max-w-2xl mb-6">
+      <p className="   -600 max-w-2xl mb-6">
         Our mission is to provide lifesaving care and support through blood
         donations, modern blood banking, and essential health screenings. With
         your help, we bring hope and healing to individuals and families when
@@ -91,13 +91,13 @@ const LifesavingWork = () => {
       <div
         data-aos="fade-up"
         data-aos-duration="1400"
-        className="bg-white shadow-md p-6 rounded-lg"
+        className=" shadow-md p-6 rounded-lg"
       >
         <div className="flex flex-col md:flex-row gap-6 items-center">
           <div className="flex-1">
             <h2 className="text-2xl font-semibold mb-4">{content.title}</h2>
-            <p className="text-gray-600 mb-4">{content.description}</p>
-            <ul className="text-gray-700 space-y-2 mb-4">
+            <p className="   -600 mb-4">{content.description}</p>
+            <ul className="   -700 space-y-2 mb-4">
               {content.bullets.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-2">
                   <FaChevronRight className="text-red-600 mt-1" /> {item}

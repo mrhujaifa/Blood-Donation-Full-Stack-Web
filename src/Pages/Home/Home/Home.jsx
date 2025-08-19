@@ -13,9 +13,7 @@ const Home = () => {
       <div className="">
         <Banner></Banner>
       </div>
-      <div className="">
-        <SwiperMarquee></SwiperMarquee>
-      </div>
+
       <div className="">
         <BloodDriveSection></BloodDriveSection>
       </div>
@@ -28,6 +26,9 @@ const Home = () => {
       </div>
       <div className=" ">
         <LifesavingWork></LifesavingWork>
+      </div>
+      <div className="">
+        <SwiperMarquee></SwiperMarquee>
       </div>
       <div className=" ">
         <ContactUs></ContactUs>

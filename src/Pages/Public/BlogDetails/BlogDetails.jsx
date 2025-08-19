@@ -28,9 +28,9 @@ const BlogDetails = () => {
         alt={blog.title}
         className="w-full h-60 object-cover rounded-xl mb-6"
       />
-      <h1 className="text-3xl font-bold text-gray-800 mb-4">{blog.title}</h1>
+      <h1 className="text-3xl font-bold   -800 mb-4">{blog.title}</h1>
       <div
-        className="text-gray-700 leading-relaxed"
+        className="  -700 leading-relaxed"
         dangerouslySetInnerHTML={{ __html: blog.content }}
       />
     </div>

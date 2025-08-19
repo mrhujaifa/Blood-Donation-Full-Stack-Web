@@ -6,7 +6,7 @@ const Testimonials = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left Section: Headline and Description */}
         <div>
-          <h4 className="text-red-600 text-sm font-semibold uppercase tracking-wider mb-2">
+          <h4 className="text-red-600 text-sm lg:text-4xl font-semibold  tracking-wider mb-2">
             Testimonials
           </h4>
           <h2 className="text-5xl font-semibold text-gray-900 leading-tight mb-6">

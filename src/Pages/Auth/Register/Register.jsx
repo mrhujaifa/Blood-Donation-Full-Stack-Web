@@ -108,9 +108,12 @@ const Register = () => {
           Register as Donor
         </h2>
 
-        <form onSubmit={handleSubmit(handleRegister)} className="space-y-5">
+        <form
+          onSubmit={handleSubmit(handleRegister)}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+        >
           {/* Full Name */}
-          <div>
+          <div className="col-span-1">
             <label className="block text-white font-medium mb-1">
               Full Name
             </label>
@@ -124,7 +127,9 @@ const Register = () => {
               <p className="text-sm text-red-500">{errors.name.message}</p>
             )}
           </div>
-          <div>
+
+          {/* Profile pic */}
+          <div className="col-span-1">
             <label className="block text-white font-medium mb-1">
               Profile pic
             </label>
@@ -137,7 +142,7 @@ const Register = () => {
           </div>
 
           {/* Email */}
-          <div>
+          <div className="col-span-1">
             <label className="block text-white font-medium mb-1">
               Email Address
             </label>
@@ -153,7 +158,7 @@ const Register = () => {
           </div>
 
           {/* Blood Group */}
-          <div>
+          <div className="col-span-1">
             <label className="block text-white font-medium mb-1">
               Blood Group
             </label>
@@ -181,7 +186,7 @@ const Register = () => {
           </div>
 
           {/* District */}
-          <div>
+          <div className="col-span-1">
             <label className="block text-white font-medium mb-1">
               District
             </label>
@@ -202,7 +207,7 @@ const Register = () => {
           </div>
 
           {/* Upazila */}
-          <div>
+          <div className="col-span-1">
             <label className="block text-white font-medium mb-1">Upazila</label>
             <select
               {...register("upazila", { required: "Upazila is required" })}
@@ -221,7 +226,7 @@ const Register = () => {
           </div>
 
           {/* Password */}
-          <div className="relative">
+          <div className="col-span-1 relative">
             <label className="block text-white font-medium mb-1">
               Password
             </label>
@@ -244,7 +249,7 @@ const Register = () => {
           </div>
 
           {/* Confirm Password */}
-          <div className="relative">
+          <div className="col-span-1 relative">
             <label className="block text-white font-medium mb-1">
               Confirm Password
             </label>
@@ -272,13 +277,15 @@ const Register = () => {
             )}
           </div>
 
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full px-6 py-3 text-white font-semibold rounded-lg transition duration-300 shadow-md hover:shadow-[0_0_15px_#ff1a56] bg-[#ff1a56] hover:bg-[#e0134c]"
-          >
-            Register
-          </button>
+          {/* Submit Button (Full Width across both cols) */}
+          <div className="col-span-1 md:col-span-2">
+            <button
+              type="submit"
+              className="w-full px-6 py-3 text-white font-semibold rounded-lg transition duration-300 shadow-md hover:shadow-[0_0_15px_#ff1a56] bg-[#ff1a56] hover:bg-[#e0134c]"
+            >
+              Register
+            </button>
+          </div>
         </form>
 
         <p className="mt-6 text-center text-white">

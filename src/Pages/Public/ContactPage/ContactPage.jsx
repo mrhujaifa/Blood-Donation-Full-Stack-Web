@@ -3,17 +3,17 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen bg-white px-4 sm:px-6 lg:px-16 py-10 container mx-auto mt-30">
+    <div className="min-h-screen       px-4 sm:px-6 lg:px-16 py-10 container mx-auto mt-30">
       <h2 className="text-3xl font-bold text-red-600 mb-4 text-center">Contact Us</h2>
-      <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+      <p className="text-center  -600 mb-10 max-w-2xl mx-auto">
         If you have any questions or would like to become a part of our blood donation network, please get in touch with us.
       </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         {/* Contact Form */}
-        <form className="bg-gray-50 p-6 rounded-xl shadow-lg space-y-5">
+        <form className="border-base-content border border-gray-50 p-6 rounded-xl shadow-lg space-y-5">
           <div>
-            <label className="block text-sm font-medium text-gray-700">Full Name</label>
+            <label className="block text-sm font-medium  -700">Full Name</label>
             <input
               type="text"
               placeholder="Your Name"
@@ -22,7 +22,7 @@ const ContactPage = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Email</label>
+            <label className="block text-sm font-medium  -700">Email</label>
             <input
               type="email"
               placeholder="you@example.com"
@@ -31,7 +31,7 @@ const ContactPage = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Subject</label>
+            <label className="block text-sm font-medium  -700">Subject</label>
             <input
               type="text"
               placeholder="Subject"
@@ -40,7 +40,7 @@ const ContactPage = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Message</label>
+            <label className="block text-sm font-medium  -700">Message</label>
             <textarea
               rows="5"
               placeholder="Write your message here..."

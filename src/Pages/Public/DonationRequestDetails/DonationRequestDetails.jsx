@@ -71,7 +71,7 @@ const DonationRequestDetails = () => {
   };
 
   if (loading)
-    return <div className="text-center py-20 text-gray-600">Loading...</div>;
+    return <div className="text-center py-20 text-     -600">Loading...</div>;
 
   if (!request)
     return (
@@ -139,10 +139,10 @@ const DonationRequestDetails = () => {
                 key={idx}
                 className={`border-b last:border-b-0 hover:bg-red-50 transition-colors duration-200`}
               >
-                <td className="border-r border-red-200 px-6 py-4 font-medium text-gray-700">
+                <td className="border-r border-red-200 px-6 py-4 font-medium text-     -700">
                   {label}
                 </td>
-                <td className="px-6 py-4 text-gray-800">{value}</td>
+                <td className="px-6 py-4 text-     -800">{value}</td>
               </tr>
             ))}
           </tbody>
@@ -154,10 +154,10 @@ const DonationRequestDetails = () => {
             <h3 className="text-xl font-semibold text-red-600 mb-4">
               Donor Information
             </h3>
-            <p className="text-gray-700">
+            <p className="text-     -700">
               <strong>Name:</strong> {request.donorName}
             </p>
-            <p className="text-gray-700">
+            <p className="text-     -700">
               <strong>Email:</strong> {request.donorEmail}
             </p>
           </div>
@@ -256,31 +256,31 @@ const DonationRequestDetails = () => {
           <div className="bg-white rounded-md shadow p-6 max-w-md w-full space-y-4">
             <h3 className="text-xl font-bold text-red-600">Confirm Donation</h3>
             <div>
-              <label className="block mb-1 font-semibold text-gray-700">
+              <label className="block mb-1 font-semibold">
                 Donor Name
               </label>
               <input
                 type="text"
                 value={user.displayName}
                 readOnly
-                className="w-full border border-gray-300 rounded px-3 py-2 bg-gray-100 focus:outline-none"
+                className="w-full border  rounded px-3 py-2     -100 focus:outline-none"
               />
             </div>
             <div>
-              <label className="block mb-1 font-semibold text-gray-700">
+              <label className="block mb-1 font-semibold text-     -700">
                 Donor Email
               </label>
               <input
                 type="email"
                 value={user.email}
                 readOnly
-                className="w-full border border-gray-300 rounded px-3 py-2 bg-gray-100 focus:outline-none"
+                className="w-full border  rounded px-3 py-2     -100 focus:outline-none"
               />
             </div>
             <div className="flex justify-end gap-4">
               <button
                 onClick={() => setShowModal(false)}
-                className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                className="px-4 py-2     -300 rounded hover:    -400"
               >
                 Cancel
               </button>

@@ -8,8 +8,9 @@ import BloodDonation from "../../assets/blood-donation.png";
 import { FaHandHoldingDollar } from "react-icons/fa6";
 
 import "./Header.css";
+import ToggleSwitch from "../DarkMode/DarkMode";
 
-const Navbar = () => {
+const Header = ({ theme, toggleTheme }) => {
   const { user, logOut } = useAuth();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -41,21 +42,23 @@ const Navbar = () => {
           Blog
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/dashboard/donation-request"
-          className="text-white font-medium"
-        >
-          Donation Requests
-        </NavLink>
-      </li>
 
       {user && (
-        <li>
-          <NavLink to="/dashboard" className="text-white font-medium">
-            Dashboard
-          </NavLink>
-        </li>
+        <>
+          <li>
+            <NavLink
+              to="/dashboard/donation-request"
+              className="text-white font-medium"
+            >
+              Donation Requests
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/dashboard" className="text-white font-medium">
+              Dashboard
+            </NavLink>
+          </li>
+        </>
       )}
     </>
   );
@@ -274,12 +277,17 @@ const Navbar = () => {
                         <Settings /> Setting
                       </button>
                     </li>
+
+                    <li className="mx-1">
+                      {/* Theme Toggle */}
+                      <ToggleSwitch theme={theme} toggleTheme={toggleTheme} />
+                    </li>
                     <li>
                       <button
                         onClick={handleLogOut}
-                        className="flex items-center gap-3 text-red-600 hover:bg-red-50 w-full p-2 rounded-md"
+                        className="flex items-center gap-3  text-red-600 hover:bg-red-50 w-full p-2 rounded-md"
                       >
-                        <FaSignOutAlt /> Logout
+                        <FaSignOutAlt size={23}/> Logout
                       </button>
                     </li>
                   </ul>
@@ -293,4 +301,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

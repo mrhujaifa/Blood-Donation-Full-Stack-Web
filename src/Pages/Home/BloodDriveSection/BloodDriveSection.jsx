@@ -23,7 +23,7 @@ const BloodDriveSection = () => {
                 <h2 className="text-3xl sm:text-4xl font-bold text-red-700">
                   <CountUp end={item.end} duration={2} />+
                 </h2>
-                <p className="text-sm text-gray-800 mt-1">{item.label}</p>
+                <p className="text-sm  -800 mt-1">{item.label}</p>
               </div>
             ))}
           </div>
@@ -45,7 +45,7 @@ const BloodDriveSection = () => {
             {/* Stacked Images */}
             <div className="flex flex-1 flex-col gap-4">
               <img
-                src="https://zahrah.creedcreatives.net/donors/wp-content/uploads/sites/31/2025/02/blood-bag-in-tray-2023-11-27-05-34-53-utc.jpg"
+                src="https://st2.depositphotos.com/2977159/7409/i/950/depositphotos_74091937-stock-photo-blood-bag-in-a-blood.jpg"
                 alt="blood bag"
                 className="w-full h-40 sm:h-44 md:h-1/2 object-cover rounded-xl shadow"
               />
@@ -65,16 +65,16 @@ const BloodDriveSection = () => {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-snug">
               Dedicated to Life, The Story of Our Blood Drive Initiative
             </h2>
-            <p className="text-gray-700 mb-6 text-sm sm:text-base">
+            <p className=" -700 mb-6 text-sm sm:text-base">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla
               curabitur adipiscing pulvinar nisi natoque odio cursus.
               Consectetur lacus ridiculus sagittis nisi non euismod molestie.
             </p>
 
             {/* Boxed Help */}
-            <div className="bg-gray-100 rounded-xl p-5 mb-6 shadow-sm">
+            <div className=" rounded-xl p-5 mb-6 shadow-sm">
               <h4 className="text-lg font-semibold mb-2">Have a Question?</h4>
-              <p className="text-sm text-gray-600 mb-3">
+              <p className="text-sm  -600 mb-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
               <div className="flex items-center gap-4">
@@ -89,7 +89,7 @@ const BloodDriveSection = () => {
             </div>
 
             {/* Bullet Points */}
-            <ul className="space-y-3 text-gray-700 mb-6 text-sm sm:text-base">
+            <ul className="space-y-3  -700 mb-6 text-sm sm:text-base">
               {[
                 "Torquent sem ligula ultrices odio.",
                 "Integer aliquet enim conubia.",

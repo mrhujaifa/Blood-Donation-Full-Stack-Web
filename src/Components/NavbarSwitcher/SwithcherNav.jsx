@@ -6,8 +6,9 @@ import { FaUser, FaTachometerAlt, FaSignOutAlt } from "react-icons/fa";
 import { Settings } from "lucide-react";
 import BloodDonation from "../../assets/blood-donation.png";
 import { FaHandHoldingDollar } from "react-icons/fa6";
+import DarkModeToggle from "../DarkMode/DarkMode";
 
-const SwithcherNav = () => {
+const SwithcherNav = ({ theme, toggleTheme }) => {
   const { user, logOut } = useAuth();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -34,31 +35,34 @@ const SwithcherNav = () => {
           Contact
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/dashboard/donation-request"
-          className="text-white font-medium"
-        >
-          Donation Requests
-        </NavLink>
-      </li>
+
       <li>
         <NavLink to="/blogs" className="text-white font-medium">
           Blog
         </NavLink>
       </li>
       {user && (
-        <li>
-          <NavLink to="/dashboard" className="text-white font-medium">
-            Dashboard
-          </NavLink>
-        </li>
+        <>
+          <li>
+            <NavLink
+              to="/dashboard/donation-request"
+              className="text-white font-medium"
+            >
+              Donation Requests
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/dashboard" className="text-white font-medium">
+              Dashboard
+            </NavLink>
+          </li>
+        </>
       )}
     </>
   );
 
   return (
-    <div className="w-full text-white  sticky top-0 z-50  lg:py-4 ">
+    <div className="w-full text-white  sticky top-0 z-50  lg:py-2 ">
       <div className="navbar container mx-auto flex justify-between items-center py-2">
         {/* Left: Mobile Hamburger Menu */}
         <div className="lg:hidden">
@@ -139,8 +143,7 @@ const SwithcherNav = () => {
                 to="/signIn"
                 className="
     btn btn-sm btn-outline
-    border-2 border-[#da0303]
-    text-[#da0303]
+    border-2 border-white
     rounded-lg
     px-5 py-2
     transition
@@ -270,6 +273,10 @@ const SwithcherNav = () => {
                       <button className="flex items-center gap-3 text-gray-700 hover:bg-gray-100 w-full p-2 rounded-md">
                         <Settings /> Setting
                       </button>
+                    </li>
+                    <li className="mx-1">
+                      {/* Theme Toggle */}
+                      <DarkModeToggle theme={theme} toggleTheme={toggleTheme} />
                     </li>
                     <li>
                       <button
